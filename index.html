@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" class="flex-centre">
+        <div id="projects">
+            <ul id="tags">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#personal">Personal</a></li>
+                <span class="addTag" id="addTag">+</span>
+                <div class="addPopup" id="tagPopup">
+                    <div class="popupContent" >
+                        <span class="close" onclick="closeModal(event)">&times;</span>
+                        <span>Add Category:</span>
+                        <input type="text" name="item" id="tagName">
+                        <a class="btn" id="add" onclick="createTag(event)">Add</a>
+                    </div>
+                </div>
+            </ul>
+            <ol id="work">
+                <li><input type="checkbox">Document creation <span class="removeItem">&times;</span> </li>
+                <li><input type="checkbox">Meeting <span class="removeItem">&times;</span></li>
+            </ol>
+            <ol id="personal">
+                <li><input type="checkbox">Doctor appointment <span class="removeItem">&times;</span></li>
+                <li><input type="checkbox">groceries <span class="removeItem">&times;</span></li>
+            </ol>
+            <a class="btn" id="addItems" onclick="add(event)">Add Items</a>
+            <div class="addPopup" id="addPopup">
+                <div class="popupContent" >
+                    <span class="close" onclick="closeModal(event)">&times;</span>
+                    <span>Add Item:</span>
+                    <input type="text" name="item" id="itemName">
+                    <a class="btn" id="add" onclick="addItem(event)">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

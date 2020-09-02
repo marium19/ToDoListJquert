@@ -1,0 +1,142 @@
+:root{
+     font-size: 62.5%; 
+}
+
+*{
+    /* box-sizing: border-box; */
+    font-family: 'Courier New', Courier, monospace;
+    margin:0;
+    padding: 0;
+    color: #333;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects{
+    border: 0.15rem #333 solid;
+    width: 70rem;
+    font-size: 2rem;
+
+    /* background-color: lightgrey; */
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
+}
+
+#tags{
+    /* width: 100%; */
+    display: block;
+    font-size: 2rem;
+    background-color: white;
+    
+}
+
+/* tags css overwrite */
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #6f8888;
+    background: #7e9a9a;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+ul li{
+    font-weight: 600;
+}
+
+ol{
+    list-style: none;
+    padding-left: 0.2rem;
+    margin-right: 5rem;
+}
+
+li input{
+    margin-right: 2rem;
+}
+
+ol li{
+    cursor: pointer;
+    font-weight: 550;
+}
+
+#projects a{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    cursor: pointer;
+    border: 0.2rem #333 solid;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: #7e9a9a;
+}
+
+.ui-widget-content a {
+    color: white;
+}
+
+/* Modal add item popup */
+.addPopup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.popupContent{
+    background-color: #CCCC99;
+    margin: 20% auto;
+    padding: 2rem;
+    border: 0.3rem #888 solid;
+    width: 50rem;
+}
+
+.popupContent input{
+    margin-top: 1rem;
+}
+
+.close{
+    float: right;
+}
+
+.close:hover, .close:focus{
+    color:#333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.removeItem{
+    float: right;
+    color: darkgrey;
+}
+
+.removeItem:hover, .removeItem:focus{
+    color:#333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add{
+    margin-top: 1rem;
+}
+
+.addTag{
+    float: right;
+    font-size: 3rem;
+}
+
+.addTag:hover, .addTag:focus{
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
