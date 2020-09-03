@@ -46,6 +46,7 @@ $(document).ready(function(){
             //console.log($(this));
             $(this).parent().hide(500);
         });
+
     }
 
     //on checking items from the list
@@ -72,10 +73,15 @@ $(document).ready(function(){
 
     //onclick of addtag
     createTag = (e) =>{
-        console.log($("#tagName").val());
+        //console.log($("#tagName").val());
         let tag="<li><a href='#"+$("#tagName").val()+"'>"+$("#tagName").val()+"</li>";
         $("#tags").append(tag);
         $("#tagPopup").hide();
+        let description = "<ol id='"+$("#tagName").val()+"'></ol>";
+        //console.log(description);
+        $(description).insertAfter("ol");
+        $("#projects").tabs("refresh");
+        //addItem();
     }
 
 
